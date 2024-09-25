@@ -1,0 +1,230 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  --color-background: #171A31;
+  /* Fondo por defecto */
+  --color-text: #fff;
+  /* Texto por defecto */
+  --color-primary: #E7622E;
+  /* Color primario */
+  --color-secondary: #6c757d;
+  /* Color secundario */
+  --color-success: #28a745;
+  /* Color de éxito */
+  --color-danger: #dc3545;
+  /* Color de peligro */
+  --color-warning: #ffc107;
+  /* Color de advertencia */
+  --color-info: #17a2b8;
+  /* Color de información */
+  --color-light: #e2863a;
+  /* Color claro */
+  --color-dark: #343a40;
+  /* Color oscuro */
+
+  --font-family-base: 'system-ui', -apple-system, sans-serif;
+  /* Fuente base */
+  --font-size-base: 16px;
+  /* Tamaño de fuente base */
+  --font-size-lg: 1.25rem;
+  /* Tamaño de fuente grande */
+  --font-size-sm: 0.875rem;
+  /* Tamaño de fuente pequeño */
+
+  --spacing-xs: 0.25rem;
+  /* Espaciado extra pequeño */
+  --spacing-sm: 0.5rem;
+  /* Espaciado pequeño */
+  --spacing-md: 1rem;
+  /* Espaciado medio */
+  --spacing-lg: 1.5rem;
+  /* Espaciado grande */
+  --spacing-xl: 3rem;
+  /* Espaciado extra grande */
+
+  --border-radius: 0.25rem;
+  /* Radio de borde por defecto */
+}
+
+
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+h1 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 9%;
+  background-color: var(--color-background);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  height: 80px;
+  /* Altura fija */
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav {
+  display: flex;
+  transition: top 0.6s ease;
+  /* Transición suave de 0.6 segundos */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.nav-list li {
+  margin: 0;
+
+}
+
+.nav-list a {
+
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: var(--color-light);
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon {
+  display: block;
+}
+
+.close-icon {
+  display: none;
+}
+
+/* Main*/
+main {
+  margin-top: 80px;
+  /* Aumenta el margen para que el contenido no quede detrás del header */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    /* Oculta el menú por defecto */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    /* Ajusta según la altura del header */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav.active {
+    display: flex;
+    /* Muestra el menú al activarse */
+  }
+
+  .menu-toggle {
+    display: block;
+    /* Muestra el icono del menú */
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .menu-toggle.active .menu-icon {
+    display: none;
+    /* Oculta el icono del menú cuando está activo */
+  }
+
+  .menu-toggle.active .close-icon {
+    display: block;
+    /* Muestra el icono de cerrar */
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list li {
+    padding: 0 0 10px;
+  }
+}

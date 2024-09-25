@@ -1,0 +1,115 @@
+/* Reset CSS Profundo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  /* Mejora la legibilidad */
+  -webkit-text-size-adjust: 100%;
+  /* Evita que los navegadores ajusten el tamaño de fuente */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+  /* Ajusta el grosor de los encabezados */
+}
+
+p {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /* Mantiene la relación de aspecto */
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  /* Hereda el estilo de fuente */
+  margin: 0;
+  /* Elimina márgenes por defecto */
+}
+
+button {
+  padding: 0;
+  /* Elimina padding por defecto en botones */
+  background: none;
+  /* Elimina el fondo por defecto */
+  border: none;
+  /* Elimina el borde por defecto */
+  cursor: pointer;
+  /* Cambia el cursor al pasar sobre botones */
+}
+
+a {
+  text-decoration: none;
+  /* Elimina subrayado en enlaces */
+  color: inherit;
+  /* Hereda el color del texto */
+}
+
+ul,
+ol {
+  list-style: none;
+  /* Elimina estilos de lista por defecto */
+}
+
+table {
+  border-collapse: collapse;
+  /* Elimina espacios entre celdas */
+  width: 100%;
+  /* Asegura que la tabla ocupe todo el ancho disponible */
+}
+
+caption {
+  text-align: left;
+  /* Alinea el texto de las leyendas a la izquierda */
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajustes para el tamaño de los inputs */
+input,
+textarea {
+  width: 100%;
+  /* Hace que los inputs ocupen el ancho completo */
+  outline: none;
+  /* Elimina el contorno por defecto */
+}
+
+select {
+  appearance: none;
+  /* Elimina el estilo por defecto de los selectores */
+  -webkit-appearance: none;
+}
+
+/* Asegura que todos los elementos sean invisibles en la impresión */
+@media print {
+
+  *,
+  *::before,
+  *::after {
+    display: none !important;
+  }
+}
