@@ -8,6 +8,7 @@
 html,
 body {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -42,6 +43,10 @@ ol {
   list-style: none;
 }
 
+.none {
+  display: none;
+}
+
 :root {
   --color-background: #171A31;
   /* Fondo por defecto */
@@ -61,7 +66,7 @@ ol {
   /* Color de información */
   --color-light: #e2863a;
   /* Color claro */
-  --color-dark: #343a40;
+  --color-dark: #343a4071;
   /* Color oscuro */
 
   --font-family-base: 'system-ui', -apple-system, sans-serif;
@@ -95,6 +100,15 @@ body {
   color: var(--color-text);
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
+}
+
+section {
+  min-height: 100vh;
+  /* Cada sección ocupa al menos el 100% de la altura de la ventana */
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -176,6 +190,88 @@ main {
   /* Aumenta el margen para que el contenido no quede detrás del header */
 }
 
+.section-home {
+  display: flex;
+  gap: 10px;
+}
+
+/*seccion de presentacion*/
+/* Alineación del contenido a la izquierda */
+.section-home__header {
+  max-width: 60%;
+  display: block;
+}
+
+/* Título y descripción */
+.section-home__title {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.section-home__subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: var(--color-light);
+}
+
+.section-home__description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* Enlaces de navegación */
+.section-home__links {
+  display: flex;
+  gap: 30px;
+}
+
+.section-home__link {
+  padding: var(--spacing-sm);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: bold;
+  background-color: var(--color-dark);
+  border-radius: 4px;
+}
+
+.section-home__link:hover {
+  color: var(--color-light);
+}
+
+.section-home__link svg path {
+  fill: var(--color-secondary);
+  /* Cambia el color al pasar el mouse */
+}
+
+.section-home__link:hover svg path {
+  fill: var(--color-light);
+  /* Cambia el color al pasar el mouse */
+}
+
+/* Imagen a la derecha */
+.section-home__picture {
+  max-width: 25%;
+  display: block;
+}
+
+.section-home__image {
+  width: 100%;
+  border-radius: 10px;
+  filter: grayscale(100%);
+  /* Escala de grises */
+  transition: filter 0.3s ease;
+  /* Transición suave */
+}
+
+.section-home__image:hover {
+  filter: grayscale(0%);
+  /* Recupera el color original al hacer hover */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav {
@@ -227,4 +323,47 @@ main {
   .nav-list li {
     padding: 0 0 10px;
   }
+
+  /*Seccion home*/
+  .section-home {
+    padding: 0;
+  }
+
+  .section-home__title {
+    font-size: 2.2rem;
+  }
+
+  .section-home__subtitle {
+    font-size: 1rem;
+  }
+
+  .section-home__description {
+    font-size: 1rem;
+  }
+
+  .section-home__link span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-home {
+    padding: 2rem 0;
+    flex-direction: column-reverse;
+  }
+
+  .section-home__header {
+    max-width: 90%;
+  }
+
+  .section-home__links {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .section-home__link--none {
+    display: none;
+    /* Oculta el enlace en dispositivos móviles */
+  }
+
 }
