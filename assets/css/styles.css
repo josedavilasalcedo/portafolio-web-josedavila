@@ -451,6 +451,120 @@ main {
   background-color: var(--color-light);
 }
 
+/*Seccion contacto*/
+.contact__content {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  padding-top: 2rem;
+  margin-top: 4rem;
+}
+
+.contact__image-container {
+  width: 40%;
+
+}
+
+.contact__image {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* General Form Styles */
+.contact__form {
+  max-width: 500px;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.contact__title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-background);
+  text-align: center;
+}
+
+.contact__description {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-background);
+  font-weight: 400;
+  text-align: center;
+}
+
+.contact__form-group {
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.contact__label {
+  font-size: 1.2rem;
+  color: var(--color-background);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.contact__input,
+.contact__textarea {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  font-size: 0.95rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.contact__textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Hover & Focus Effects */
+.contact__input:hover,
+.contact__textarea:hover {
+  border-color: #aaa;
+}
+
+.contact__input:focus,
+.contact__textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 6px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+/* Submit Button Styles */
+.contact__button {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: bold;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact__button:hover {
+  background-color: var(--color-light);
+  transform: translateY(-2px);
+}
+
+.contact__button:active {
+  background-color: #1c6ea4;
+  transform: translateY(0);
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav {
@@ -526,6 +640,11 @@ main {
     flex-direction: column;
   }
 
+  /*Seccion contacto*/
+  .contact__content {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -550,6 +669,11 @@ main {
 
   /*seccion proyectos*/
   .project {
+    width: 90%;
+  }
+
+  /*Seccion contact*/
+  .contact__form {
     width: 90%;
   }
 

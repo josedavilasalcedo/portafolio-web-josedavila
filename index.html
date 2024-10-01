@@ -226,12 +226,57 @@
 
 
     <!-- Sección Contacto -->
-    <section id="contact">
-      <h2>Contacto</h2>
-      <p>Aquí puedes agregar un formulario de contacto o información para que te puedan contactar.</p>
+    <section id="contact" class="contact">
+
+
+      <div class="contact__content">
+        <figure class="contact__image-container">
+          <img src="./assets/images/contact.svg" alt="Imagen representativa de contacto" class="contact__image">
+        </figure>
+
+        <form class="contact__form" aria-label="Formulario de contacto" action="https://formspree.io/f/xvgpeybg"
+          method="POST">
+          <h2 class="contact__title">Contacto</h2>
+          <p class="contact__description">Por favor, completa el siguiente formulario para ponerte en contacto conmigo.
+          </p>
+
+          <div class="contact__form-group">
+            <label for="name" class="contact__label">Nombre</label>
+            <input type="text" id="name" name="name" class="contact__input contact__input--name" placeholder="Tu nombre"
+              aria-required="true" required>
+          </div>
+
+          <div class="contact__form-group">
+            <label for="email" class="contact__label">Email</label>
+            <input type="email" id="email" name="email" class="contact__input contact__input--email"
+              placeholder="Tu correo electrónico" aria-required="true" required>
+          </div>
+
+          <div class="contact__form-group">
+            <label for="subject" class="contact__label">Asunto</label>
+            <input type="text" id="subject" name="subject" class="contact__input contact__input--subject"
+              placeholder="Asunto" aria-required="true" required>
+          </div>
+
+          <div class="contact__form-group">
+            <label for="message" class="contact__label">Mensaje</label>
+            <textarea id="message" name="message" class="contact__textarea" placeholder="Escribe tu mensaje"
+              aria-required="true" required></textarea>
+          </div>
+
+          <button type="submit" class="contact__button">Enviar</button>
+        </form>
+
+
+      </div>
     </section>
+
   </main>
   <!--Fin del main-->
+
+  <footer>
+    <small>Todos los derechos reservados</small>
+  </footer>
 
   <script src="./assets/js/scripts.js"></script>
 </body>
