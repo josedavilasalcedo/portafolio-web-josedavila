@@ -639,6 +639,9 @@ main {
   }
 
   /*Seccion home*/
+  .section-home {
+    padding-top: 6rem;
+  }
 
   .section-home__title {
     font-size: 2.2rem;
@@ -656,9 +659,29 @@ main {
     font-size: 1rem;
   }
 
+  /*seccion skills*/
+  .skills {
+    padding-top: 6rem;
+  }
+
+  /**seccion formacion */
+
+  .formation {
+    padding-top: 6rem;
+  }
+
+
   /*seccion de proyectos*/
+  .projects {
+    padding-top: 6rem;
+  }
+
   .project {
     flex-direction: column;
+  }
+
+  .projects__title {
+    font-size: 1.7rem;
   }
 
   /*Seccion contacto*/
