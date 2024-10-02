@@ -377,8 +377,6 @@ main {
   width: 60%;
 }
 
-.formation__item-details {}
-
 .formation__item-degree {
   font-size: var(--spacing-md);
 }
@@ -452,6 +450,10 @@ main {
 }
 
 /*Seccion contacto*/
+.contact {
+  margin-bottom: 4rem;
+}
+
 .contact__content {
   display: flex;
   justify-content: center;
@@ -564,6 +566,25 @@ main {
   transform: translateY(0);
 }
 
+/*Footer*/
+.footer {
+  background-color: #242837;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer__text {
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+.footer__text:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
